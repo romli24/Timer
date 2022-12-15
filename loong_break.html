@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>15:00 - Time for a break!</title>
+  </head>
+
+
+ 
+<script>
+    // menetapkan waktu hitung mundur (dalam detik)
+    var hitungmundur = 60 * 15; // 15 menit
+    
+    // memperbarui hitung mundur setiap 1 detik
+    var timer = setInterval(function() {
+      hitungmundur--;
+    
+      // menghitung menit dan detik tersisa
+      var menit = Math.floor(hitungmundur / 60);
+      var detik = hitungmundur % 60;
+    
+      // menambahkan 0 di depan angka yang kurang dari 10
+      if (menit < 10) menit = "0" + menit;
+      if (detik < 10) detik = "0" + detik;
+    
+      // menampilkan hitung mundur di tag <timer>
+      document.getElementById("timer").innerHTML = menit + ":" + detik;
+    
+      // jika hitung mundur habis, menampilkan pesan "Waktu habis!"
+      if (hitungmundur == 0) {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "Waktu habis!";
+      }
+    }, 1000);
+    </script>   
+    
+
+<style>
+        @media screen and (min-width: 600px) {
+    .card {
+        width: auto;
+    }
+    .navbar {
+        width: auto;
+    }
+    }
+    .transbox {
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 7px;
+    }
+    .transbutton {
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    width: 85px;
+    height: 35px;
+    }
+    .transbutton2 {
+    background: rgb(64, 112, 151);
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none white;
+    }
+    .transbut {
+    background: rgba(255, 255, 255, 0);
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none white;
+    }
+    .more {
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    }
+    .timer {
+        width: 200px;
+        height: 200px;
+    }
+    .hr {
+        margin-top: auto;
+    }
+    .garis {
+        border-bottom: 2px solid rgb(255, 255, 255); 
+        height: 5px;
+    }
+    .garisbutton {
+        background: rgba(43, 43, 43, 0.116);
+        border-radius: 7px;
+        width: 100%;
+        height: 65px;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.658);
+        border: 2px dashed rgba(255, 255, 255, 0.349);;
+    }
+    .text {
+        color: rgba(255, 255, 255, 0.479);
+        text-align: center;
+    }
+    .text2 {
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+    
+    
+</style>
+
+
+  <body style="background-color: rgb(64, 112, 151);">
+
+    <!--NAVBAR-->
+    <div class="container" style="width: 48%;">
+        <nav class="navbar" style="background-color: rgb(64, 112, 151);">
+            <div class="container-fluid">
+              <a class="navbar-brand" style="color: white; font-size: 23px; font-weight: 500;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>Promofocus
+            </a>
+              <form class="d-flex">
+                <button class="transbutton me-2" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart">
+                        <line x1="12" y1="20" x2="12" y2="10"></line>
+                        <line x1="18" y1="20" x2="18" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="16"></line>
+                    </svg>Report
+                </button>
+                <button class="transbutton me-2" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>Setting
+                </button>
+                <button class="transbutton" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>Login
+                </button>
+              </form>
+            </div>
+          </nav>
+        <hr class="hr">
+    </div>  
+    <!--END NAVBAR-->
+
+    <!--CONTENT WAKTU-->
+    <div class="container" style="width: 37%;">
+        <div class="card transbox mt-5">
+            <div class="card-body">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a href="pomodoro.html" class="transbut btn-sm me-3 mb-2" type="button">Pomodoro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="short_break.html" class="transbut btn-sm me-3 mb-2" type="button">Short Break</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="loong_break.html" class="transbutton2 btn-sm me-3 active" type="button">Loong Break</a>
+                    </li>
+                </ul>
+                <div style="text-align: center;">
+                <timer id="timer" style="font-size: 120px; color: rgb(252, 249, 249); font-weight: bold;">15:00</timer>
+            </div>
+                <div class="mb-2" style="text-align: center;">
+            <button id="start" type="button" class="btn btn-light" style="width: 200px; font-size: 25px; font-weight: bold; color: rgb(64, 112, 151);"> START </button>
+                </div>
+            </div>
+        </div>
+        <div class="text mt-3">#0</div>
+        <div class="text2">Time for a break!</div>
+    </div>
+    <!--END CONTENT WAKTU-->
+
+    <!--CONTENT FITUR TAMBAHAN-->
+    <div class="container" style="width: 38%;">
+        <nav class="navbar mt-2" style="background-color: rgb(64, 112, 151);">
+            <div class="container-fluid">
+                <a class="navbar-brand" style="color: white; font-size: 20px; font-weight: bold;">Tasks</a>
+                    <form class="d-flex">
+                        <button class="more type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="12" cy="5" r="1"></circle>
+                                <circle cx="12" cy="19" r="1"></circle>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </nav>
+        <div class="garis"></div>
+            <div>
+                <button class="garisbutton mt-3">(+)Add Task</button>
+            </div>
+        </div>
+    <!--END CONTENT FITUR TAMBAHAN-->
+
+
+    <script>
+        feather.replace()
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- choose one -->
+    <script src="path/to/dist/feather.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  </body>
+</html>
